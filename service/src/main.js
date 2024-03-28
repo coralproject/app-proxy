@@ -10,8 +10,6 @@ const run = () => {
   app.use(cors("*"));
 
   app.get("/coral/:storyID/:storyURL", (req, res) => {
-    console.log("hello");
-
     const { storyID, storyURL } = req.params;
 
     const decodedURL = decodeURIComponent(storyURL);
@@ -23,14 +21,14 @@ const run = () => {
           <script type="text/javascript">
             (function() {
                 var d = document, s = d.createElement('script');
-                s.src = 'http://localhost:3002/assets/js/embed.js';
+                s.src = 'http://localhost:3000/assets/js/embed.js';
                 s.async = false;
                 s.defer = true;
                 s.onload = function() {
                     Coral.createStreamEmbed({
                         id: "coral_thread",
                         autoRender: true,
-                        rootURL: 'http://localhost:3002',
+                        rootURL: 'http://localhost:3000',
                         // Uncomment these lines and replace with the ID of the
                         // story's ID and URL from your CMS to provide the
                         // tightest integration. Refer to our documentation at
