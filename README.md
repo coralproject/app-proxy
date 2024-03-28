@@ -46,3 +46,4 @@ npx cap run ios
 
 - With any luck, you should see a Coral embed stream in the simulator
 
+  ![Simulator running Coral](readme/simulator.png)
