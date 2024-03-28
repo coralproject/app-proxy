@@ -11,8 +11,11 @@ window.customElements.define(
 
       const root = this.attachShadow({ mode: 'open' });
 
-      const storyID = "5428332a-debf-490f-818b-71a5c396334d";
-      const storyURL = "http://localhost:8001/story/5428332a-debf-490f-818b-71a5c396334d";
+      // You can provide the exact storyID and storyURL to target
+      // other Coral sites than what you're loading from. The proxy
+      // will pass this to the Coral instance.
+      const storyID = "<STORY_ID>";
+      const storyURL = "<STORY_URL>";
       const encodedStoryURL = encodeURIComponent(storyURL);
 
       root.innerHTML = `
